@@ -1,9 +1,5 @@
-const CACHE_NAME = 'beacon-3d-app-shell-v2';
-const APP_SHELL = [
-  './',
-  './index.html',
-  './manifest.webmanifest',
-];
+const CACHE_NAME = 'beacon-3d-app-shell-v3';
+const APP_SHELL = ['./', './index.html', './manifest.webmanifest'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -23,9 +19,8 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
-
-  const requestUrl = new URL(event.request.url);
-  if (requestUrl.origin !== self.location.origin) return;
+  const url = new URL(event.request.url);
+  if (url.origin !== self.location.origin) return;
 
   event.respondWith(
     caches.match(event.request).then((cached) => {
