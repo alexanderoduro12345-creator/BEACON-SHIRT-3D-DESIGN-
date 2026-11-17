@@ -1,6 +1,6 @@
 {
-  "name": "beacon-shirt-3d-design",
-  "version": "1.0.0",
+  "name": "beacon-3d",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "vite --host 0.0.0.0",
