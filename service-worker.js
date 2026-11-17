@@ -1,5 +1,5 @@
-const CACHE_NAME = 'beacon-3d-app-shell-v3';
-const APP_SHELL = ['./', './index.html', './manifest.webmanifest'];
+const CACHE_NAME = 'beacon-3d-app-shell-v4';
+const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './assets/beacon-3d-icon.svg'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -12,7 +12,7 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))))
+      .then((keys) => Promise.all(keys.filter((key) => key.startsWith('beacon-3d-app-shell-') && key !== CACHE_NAME).map((key) => caches.delete(key))))
       .then(() => self.clients.claim())
   );
 });
