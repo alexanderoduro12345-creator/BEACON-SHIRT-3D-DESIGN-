@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1020" />
+    <meta
+      name="description"
+      content="Beacon — a premium custom apparel design app that works online and offline."
+    />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Beacon | Design Studio</title>
+  </head>
+  <body>
+    <div class="bg-glow glow-one"></div>
+    <div class="bg-glow glow-two"></div>
+
+    <header class="topbar container">
+      <div class="brand" aria-label="Beacon home">
+        <div class="brand-mark">B</div>
+        <div>
+          <span class="brand-name">Beacon</span>
+          <small>studio</small>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#studio">Studio</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <button class="ghost-button" type="button">Launch app</button>
+    </header>
+
+    <main>
+      <section class="hero container" id="studio">
+        <div class="hero-copy">
+          <p class="eyebrow">OFFLINE READY · CUSTOM APPAREL</p>
+          <h1>Design your next look with Beacon.</h1>
+          <p class="subtext">
+            Craft premium apparel concepts, preview them instantly, and keep your work saved even when your connection drops.
+          </p>
+
+          <div class="cta-row">
+            <button class="primary-button" type="button">Start designing</button>
+            <button class="secondary-button" type="button">View collection</button>
+          </div>
+
+          <ul class="metrics" aria-label="Beacon statistics">
+            <li><strong>3D</strong><span>preview</span></li>
+            <li><strong>24/7</strong><span>offline</span></li>
+            <li><strong>8K</strong><span>color tests</span></li>
+          </ul>
+        </div>
+
+        <div class="studio-panel" aria-label="Design preview panel">
+          <div class="panel-header">
+            <div>
+              <p class="tiny-label">Live preview</p>
+              <h2>Beacon Tee</h2>
+            </div>
+            <span class="status-pill">Saved</span>
+          </div>
+
+          <div class="product-scene">
+            <div class="shirt-stage" aria-live="polite">
+              <div class="shirt-shadow"></div>
+              <div class="shirt-model" id="shirtModel" style="--shirt-color: #dfe7ff; --print-color: #16213d; --trim-color: #101827; --accent-color: #8bb7ff;">
+                <div class="shirt-sleeve left"></div>
+                <div class="shirt-sleeve right"></div>
+                <div class="shirt-body">
+                  <div class="shirt-neck"></div>
+                  <div class="shirt-graphic">
+                    <span id="graphicText">BEACON</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-controls">
+            <label>
+              <span>Base color</span>
+              <input id="shirtColor" type="color" value="#dfe7ff" />
+            </label>
+            <label>
+              <span>Accent</span>
+              <input id="accentColor" type="color" value="#8bb7ff" />
+            </label>
+            <label>
+              <span>Text</span>
+              <input id="graphicTextInput" type="text" value="BEACON" maxlength="12" />
+            </label>
+            <button class="mini-button" id="saveDesignButton" type="button">Save concept</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="features container" id="features">
+        <div class="section-heading">
+          <p class="eyebrow">WHY BEACON</p>
+          <h2>Built for fast design and reliable work.</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">01</div>
+            <h3>Instant mockups</h3>
+            <p>See your shirt, color, and print update in real time before you finalize a concept.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">02</div>
+            <h3>Offline-first</h3>
+            <p>Continue creating and keep local changes safe, even without a live internet connection.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">03</div>
+            <h3>Brand-ready tools</h3>
+            <p>Use the studio to explore premium colorways, print text, and presentation-ready styles.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="details container" id="about">
+        <div class="detail-copy">
+          <p class="eyebrow">BEACON APP</p>
+          <h2>From idea to draft in a single workspace.</h2>
+          <p>
+            Beacon is designed to feel like a polished creative studio: fast, clear, and dependable. It keeps your concepts available offline and stays ready when you reconnect.
+          </p>
+        </div>
+
+        <div class="detail-stack">
+          <div class="stack-box">
+            <span class="mini-tag">Mode</span>
+            <strong>Offline + online</strong>
+          </div>
+          <div class="stack-box">
+            <span class="mini-tag">Focus</span>
+            <strong>Custom apparel</strong>
+          </div>
+          <div class="stack-box">
+            <span class="mini-tag">Tools</span>
+            <strong>Color, text, preview</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <p>Beacon © 2026</p>
+      <span>Ready for the next collection.</span>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
